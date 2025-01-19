@@ -16,8 +16,8 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = ['chromadb', 'flask', 'flask-cors', 'numpy', 'pandas', 'scikit-learn']
 
 [project.urls]
 "Homepage" = "https://github.com/mtybadger/chromaviz"
 "Bug Tracker" = "https://github.com/mtybadger/chromaviz/issues"
-dependencies = ['chromadb', 'flask', 'flask-cors', 'numpy', 'pandas', 'scikit-learn']
