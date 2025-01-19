@@ -86,9 +86,10 @@ def data_api():
         points.append(point)
     return json.dumps({'points': points})
 
-def visualize_collection(col: chromadb.api.models.Collection.Collection, port: int = 5000):
+def visualize_collection(col: chromadb.api.models.Collection.Collection, port: int = 5000,auto=False):
     global data
     data = col.get(include=["documents", "metadatas", "embeddings"])
-    webbrowser.open(f"http://127.0.0.1:{str(port)}")
+    if auto:
+        webbrowser.open(f"http://127.0.0.1:{str(port)}")
     app.run(port=port, debug=False)
     return
